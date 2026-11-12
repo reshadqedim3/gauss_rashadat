@@ -425,4 +425,1138 @@
               },
               {
                 label: "4. Final Electric Field Formula:",
-                math: `E (4πr²) = <span class="frac"><span class="frac-num">Q</span><span class="frac-den">ε<sub>0</sub></span></span>  ⇒  <strong>E = <span class="frac"><span class="frac-num">
+                math: `E (4πr²) = <span class="frac"><span class="frac-num">Q</span><span class="frac-den">ε<sub>0</sub></span></span>  ⇒  <strong>E = <span class="frac"><span class="frac-num">1</span><span class="frac-den">4πε<sub>0</sub></span></span> <span class="frac"><span class="frac-num">Q</span><span class="frac-den">r²</span></span></strong>`
+              }
+            ]
+          },
+          sphere_inside: {
+            title: "2A. Solid Charged Sphere — Inside (r < R)",
+            intuition:
+              "When our imaginary bubble is INSIDE the charged ball (r < R), only the orange glowing charges trapped inside the bubble push outward. Charges outside cancel out!",
+            steps: [
+              {
+                label: "1. Volume Charge Density (ρ):",
+                math: `ρ = <span class="frac"><span class="frac-num">Q</span><span class="frac-den"><span class="frac"><span class="frac-num">4</span><span class="frac-den">3</span></span>πR³</span></span>`
+              },
+              {
+                label: "2. Charge trapped inside radius r:",
+                math: `q<sub>enc</sub> = ρ · (<span class="frac"><span class="frac-num">4</span><span class="frac-den">3</span></span>πr³) = Q <span class="frac"><span class="frac-num">r³</span><span class="frac-den">R³</span></span>`
+              },
+              {
+                label: "3. Apply Gauss's Law:",
+                math: `E (4πr²) = <span class="frac"><span class="frac-num">Q r³</span><span class="frac-den">ε<sub>0</sub> R³</span></span>`
+              },
+              {
+                label: "4. Final Formula (grows linearly with r):",
+                math: `<strong>E = <span class="frac"><span class="frac-num">1</span><span class="frac-den">4πε<sub>0</sub></span></span> <span class="frac"><span class="frac-num">Q r</span><span class="frac-den">R³</span></span></strong>   (r &lt; R)`
+              }
+            ]
+          },
+          sphere_outside: {
+            title: "2B. Solid Charged Sphere — Outside (r > R)",
+            intuition:
+              "When our imaginary bubble is OUTSIDE the charged ball (r > R), the entire ball is inside! From outside, the whole sphere acts just like a single point charge at the center.",
+            steps: [
+              {
+                label: "1. Gauss's Law:",
+                math: `∮ <span class="vec">E</span> · d<span class="vec">A</span> = <span class="frac"><span class="frac-num">q<sub>enc</sub></span><span class="frac-den">ε<sub>0</sub></span></span>`
+              },
+              {
+                label: "2. All charge of the sphere is enclosed:",
+                math: `q<sub>enc</sub> = Q`
+              },
+              {
+                label: "3. Surface area of Gaussian sphere:",
+                math: `E (4πr²) = <span class="frac"><span class="frac-num">Q</span><span class="frac-den">ε<sub>0</sub></span></span>`
+              },
+              {
+                label: "4. Final Formula (same as Point Charge):",
+                math: `<strong>E = <span class="frac"><span class="frac-num">1</span><span class="frac-den">4πε<sub>0</sub></span></span> <span class="frac"><span class="frac-num">Q</span><span class="frac-den">r²</span></span></strong>   (r &gt; R)`
+              }
+            ]
+          },
+          plane: {
+            title: "3. Uniformly Charged Infinite Surface (σ)",
+            intuition:
+              "Think of a giant flat wall covered evenly with + charges. Field arrows shoot straight out from the front and back like grass growing on both sides of a sheet—no matter how far you step back, E stays constant!",
+            steps: [
+              {
+                label: "1. Choose a Gaussian cylinder ('pillbox') of cap area A:",
+                math: `Flux passes only through 2 end caps (top & bottom); curved side has <span class="vec">E</span> ⊥ d<span class="vec">A</span> (0 flux)`
+              },
+              {
+                label: "2. Total Electric Flux through both caps:",
+                math: `Φ<sub>E</sub> = E·A + E·A = 2EA`
+              },
+              {
+                label: "3. Enclosed charge on sheet with density σ:",
+                math: `q<sub>enc</sub> = σ · A`
+              },
+              {
+                label: "4. Final Formula (independent of distance z!):",
+                math: `2EA = <span class="frac"><span class="frac-num">σA</span><span class="frac-den">ε<sub>0</sub></span></span>  ⇒  <strong>E = <span class="frac"><span class="frac-num">σ</span><span class="frac-den">2ε<sub>0</sub></span></span></strong>`
+              }
+            ]
+          },
+          rod: {
+            title: "4. Uniformly Charged Infinite Rod (λ)",
+            intuition:
+              "Imagine a long glowing neon tube with + charges along it. Field arrows burst straight outward around the tube like spokes on a wheel. We wrap a soup-can (cylinder) Gaussian surface around it!",
+            steps: [
+              {
+                label: "1. Wrap a coaxial Gaussian cylinder of radius r & length L:",
+                math: `Flux leaves only through curved wall (Area = 2πrL); flat ends have <span class="vec">E</span> ⊥ d<span class="vec">A</span>`
+              },
+              {
+                label: "2. Total Electric Flux:",
+                math: `Φ<sub>E</sub> = E · (2πrL)`
+              },
+              {
+                label: "3. Enclosed charge with linear density λ:",
+                math: `q<sub>enc</sub> = λ · L`
+              },
+              {
+                label: "4. Final Formula (L cancels out!):",
+                math: `E (2πrL) = <span class="frac"><span class="frac-num">λL</span><span class="frac-den">ε<sub>0</sub></span></span>  ⇒  <strong>E = <span class="frac"><span class="frac-num">λ</span><span class="frac-den">2πε<sub>0</sub>r</span></span></strong>`
+              }
+            ]
+          }
+        }
+      },
+      az: {
+        uiTitle: "Qauss Qanunu — 3D Simulyasiya",
+        uiSubtitle: "Şagirdlər üçün İnteraktiv 3D Fizika Laboratoriyası",
+        resetView: "Görünüşü Sıfırla",
+        gestureHint: "Fırlatmaq üçün barmaqla və ya siçanla sürüşdürün • Yaxınlaşdırmaq üçün sıxın",
+        legendCharge: "+ Yük (Q)",
+        legendGauss: "Qauss Səthi",
+        legendEfield: "Elektrik Sahəsi (E)",
+        legendNormal: "Səth Normalı (dA)",
+        layersTitle: "Görüntü Seçimləri (Checkbox)",
+        chkGaussian: "Qauss Səthi",
+        chkEfield: "Elektrik Sahəsi (E)",
+        chkNormals: "Səth Normalı (dA)",
+        chkDerivation: "Düsturun Çıxarılışı",
+        tabPoint: "Nöqtəvi Yük",
+        tabSphere: "Bərabər Yüklənmiş Kürə",
+        tabPlane: "Sonsuz Yüklü Müstəvi",
+        tabRod: "Sonsuz Yüklü Çubuq",
+        sphereRegionLbl: "Qauss Səthinin Mövqeyi",
+        btnInside: "r < R (Kürənin Daxili)",
+        btnOutside: "r > R (Kürənin Xarici)",
+        badgeInside: "r < R (Daxildə)",
+        badgeOutside: "r > R (Xaricdə)",
+        stepsHeading: "Düsturun Addım-Addım Çıxarılışı",
+        sliderPointLabel: "Qauss Kürəsinin Radiusu (r)",
+        sliderSphereLabel: "Qauss Radiusu (r)  [Kürə R = 2.2 m]",
+        sliderPlaneLabel: "Qauss Silindrinin Hündürlüyü (z)",
+        sliderRodLabel: "Qauss Silindrinin Radiusu (r)",
+        sliderCloser: "Yaxın",
+        sliderFarther: "Uzaq",
+        scenes: {
+          point: {
+            title: "1. Nöqtəvi Yük (Q)",
+            intuition:
+              "Mərkəzdə hər tərəfə bərabər işıq şüaları saçan kiçik bir yük təsəvvür edin. Onu əhatə edən xəyali şar (Qauss sferası) bütün bu şüaları tutur!",
+            steps: [
+              {
+                label: "1. Qauss Qanunu:",
+                math: `∮ <span class="vec">E</span> · d<span class="vec">A</span> = <span class="frac"><span class="frac-num">q<sub>dax</sub></span><span class="frac-den">ε<sub>0</sub></span></span>`
+              },
+              {
+                label: "2. Simmetriya (E ∥ dA və sfera üzərində E sabitdir):",
+                math: `∮ E · dA · cos(0°) = E ∮ dA = E (4πr²)`
+              },
+              {
+                label: "3. Səthin daxilindəki ümumi yük:",
+                math: `q<sub>dax</sub> = Q`
+              },
+              {
+                label: "4. Elektrik Sahəsinin Yekun Düsturu:",
+                math: `E (4πr²) = <span class="frac"><span class="frac-num">Q</span><span class="frac-den">ε<sub>0</sub></span></span>  ⇒  <strong>E = <span class="frac"><span class="frac-num">1</span><span class="frac-den">4πε<sub>0</sub></span></span> <span class="frac"><span class="frac-num">Q</span><span class="frac-den">r²</span></span></strong>`
+              }
+            ]
+          },
+          sphere_inside: {
+            title: "2A. Bərabər Yüklənmiş Bütöv Kürə — Daxildə (r < R)",
+            intuition:
+              "Xəyali Qauss kürəmiz yüklü topun DAXİLİNDƏ (r < R) olduqda, yalnız onun içində qalan parlaq narıncı yüklər sahə yaradır. Xaricdəki yüklərin təsiri bir-birini sıfırlayır!",
+            steps: [
+              {
+                label: "1. Həcm Yük Sıxlığı (ρ):",
+                math: `ρ = <span class="frac"><span class="frac-num">Q</span><span class="frac-den"><span class="frac"><span class="frac-num">4</span><span class="frac-den">3</span></span>πR³</span></span>`
+              },
+              {
+                label: "2. r radiuslu daxili hissədəki yük:",
+                math: `q<sub>dax</sub> = ρ · (<span class="frac"><span class="frac-num">4</span><span class="frac-den">3</span></span>πr³) = Q <span class="frac"><span class="frac-num">r³</span><span class="frac-den">R³</span></span>`
+              },
+              {
+                label: "3. Qauss qanununu tətbiq edək:",
+                math: `E (4πr²) = <span class="frac"><span class="frac-num">Q r³</span><span class="frac-den">ε<sub>0</sub> R³</span></span>`
+              },
+              {
+                label: "4. Yekun Düstur (r ilə düz mütənasib artır):",
+                math: `<strong>E = <span class="frac"><span class="frac-num">1</span><span class="frac-den">4πε<sub>0</sub></span></span> <span class="frac"><span class="frac-num">Q r</span><span class="frac-den">R³</span></span></strong>   (r &lt; R)`
+              }
+            ]
+          },
+          sphere_outside: {
+            title: "2B. Bərabər Yüklənmiş Bütöv Kürə — Xaricdə (r > R)",
+            intuition:
+              "Xəyali Qauss kürəmiz yüklü topun XARİCİNDƏ (r > R) olduqda, bütün top onun içində qalır! Kənardan baxdıqda bütöv kürə mərkəzdəki tək bir nöqtəvi yük kimi davranır.",
+            steps: [
+              {
+                label: "1. Qauss Qanunu:",
+                math: `∮ <span class="vec">E</span> · d<span class="vec">A</span> = <span class="frac"><span class="frac-num">q<sub>dax</sub></span><span class="frac-den">ε<sub>0</sub></span></span>`
+              },
+              {
+                label: "2. Kürənin bütün yükü daxildə qalır:",
+                math: `q<sub>dax</sub> = Q`
+              },
+              {
+                label: "3. Qauss sferasının səth sahəsi:",
+                math: `E (4πr²) = <span class="frac"><span class="frac-num">Q</span><span class="frac-den">ε<sub>0</sub></span></span>`
+              },
+              {
+                label: "4. Yekun Düstur (nöqtəvi yük ilə eynidir):",
+                math: `<strong>E = <span class="frac"><span class="frac-num">1</span><span class="frac-den">4πε<sub>0</sub></span></span> <span class="frac"><span class="frac-num">Q</span><span class="frac-den">r²</span></span></strong>   (r &gt; R)`
+              }
+            ]
+          },
+          plane: {
+            title: "3. Bərabər Yüklənmiş Sonsuz Müstəvi (σ)",
+            intuition:
+              "Üzəri + yüklərlə bərabər örtülmüş nəhəng hamar divar təsəvvür edin. Sahə oxları müstəvinin həm ön, həm arxa tərəfinə düz çıxır — nə qədər uzaqlaşsanız da E dəyişmir!",
+            steps: [
+              {
+                label: "1. Oturacağının sahəsi A olan Qauss silindri seçək:",
+                math: `Sel yalnız 2 oturacaqdan keçir; yan səthdə <span class="vec">E</span> ⊥ d<span class="vec">A</span> (sel = 0)`
+              },
+              {
+                label: "2. Hər iki oturacaqdan keçən ümumi elektrik seli:",
+                math: `Φ<sub>E</sub> = E·A + E·A = 2EA`
+              },
+              {
+                label: "3. Səth sıxlığı σ olan müstəvidən daxildə qalan yük:",
+                math: `q<sub>dax</sub> = σ · A`
+              },
+              {
+                label: "4. Yekun Düstur (z məsafəsindən asılı deyil!):",
+                math: `2EA = <span class="frac"><span class="frac-num">σA</span><span class="frac-den">ε<sub>0</sub></span></span>  ⇒  <strong>E = <span class="frac"><span class="frac-num">σ</span><span class="frac-den">2ε<sub>0</sub></span></span></strong>`
+              }
+            ]
+          },
+          rod: {
+            title: "4. Bərabər Yüklənmiş Sonsuz Çubuq (λ)",
+            intuition:
+              "Üzərində + yüklər düzülmüş uzun işıqlı neon boru təsəvvür edin. Sahə oxları borudan kənara doğru təkər milləri kimi çıxır. Onun ətrafına silindrik Qauss səthi geyindiririk!",
+            steps: [
+              {
+                label: "1. Radiusu r, uzunluğu L olan koaksial Qauss silindri:",
+                math: `Sel yalnız yan səthdən (Sahə = 2πrL) keçir; alt və üst oturacaqlarda <span class="vec">E</span> ⊥ d<span class="vec">A</span>`
+              },
+              {
+                label: "2. Ümumi Elektrik Seli:",
+                math: `Φ<sub>E</sub> = E · (2πrL)`
+              },
+              {
+                label: "3. Xətti yük sıxlığı λ olan çubuğun daxildəki yükü:",
+                math: `q<sub>dax</sub> = λ · L`
+              },
+              {
+                label: "4. Yekun Düstur (L ixtisar gedir!):",
+                math: `E (2πrL) = <span class="frac"><span class="frac-num">λL</span><span class="frac-den">ε<sub>0</sub></span></span>  ⇒  <strong>E = <span class="frac"><span class="frac-num">λ</span><span class="frac-den">2πε<sub>0</sub>r</span></span></strong>`
+              }
+            ]
+          }
+        }
+      }
+    };
+
+    /**
+     * ============================================================================
+     * 2. APPLICATION STATE
+     * ============================================================================
+     */
+    const state = {
+      lang: 'en',              // Default language: English ('en' | 'az')
+      activeScene: 'point',    // 'point' | 'sphere' | 'plane' | 'rod'
+      radius: 2.4,             // Gaussian surface radius / half-height
+      sphereRadiusR: 2.2,      // Fixed radius R of the solid charged sphere
+      showGaussian: true,
+      showEField: true,
+      showNormals: true,
+      showDerivation: true
+    };
+
+    /**
+     * ============================================================================
+     * 3. THREE.JS SCENE, LIGHTING & TOUCH/MOUSE ORBIT CAMERA
+     * ============================================================================
+     */
+    let scene, camera, renderer;
+    let chargeGroup, gaussianGroup, eFieldGroup, normalGroup;
+    let sphereChargeDots = []; // Stores individual charge meshes inside solid sphere
+
+    // Spherical camera orbit coordinates with smooth damping
+    const camOrbit = {
+      theta: 0.65,
+      phi: 1.15,
+      distance: 10.5,
+      targetTheta: 0.65,
+      targetPhi: 1.15,
+      targetDistance: 10.5,
+      isDragging: false,
+      lastX: 0,
+      lastY: 0,
+      pinchStartDist: 0,
+      pinchStartZoom: 10.5
+    };
+
+    function initThree() {
+      const container = document.getElementById('canvas-container');
+      const canvas = document.getElementById('three-canvas');
+
+      scene = new THREE.Scene();
+
+      // Camera setup
+      const width = container.clientWidth || window.innerWidth;
+      const height = container.clientHeight || 400;
+      camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+      updateCameraPosition(true);
+
+      // WebGL Renderer with antialiasing and transparent background
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setSize(width, height, false);
+
+      // Lighting setup for rich 3D depth
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.72);
+      scene.add(ambientLight);
+
+      const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.9);
+      dirLight1.position.set(8, 12, 10);
+      scene.add(dirLight1);
+
+      const dirLight2 = new THREE.DirectionalLight(0x38bdf8, 0.45);
+      dirLight2.position.set(-8, -6, -8);
+      scene.add(dirLight2);
+
+      // Subtle reference grid on floor for spatial orientation
+      const gridHelper = new THREE.GridHelper(14, 14, 0x1e293b, 0x0f172a);
+      gridHelper.position.y = -4.2;
+      scene.add(gridHelper);
+
+      // Layer groups
+      chargeGroup = new THREE.Group();
+      gaussianGroup = new THREE.Group();
+      eFieldGroup = new THREE.Group();
+      normalGroup = new THREE.Group();
+
+      scene.add(chargeGroup);
+      scene.add(gaussianGroup);
+      scene.add(eFieldGroup);
+      scene.add(normalGroup);
+
+      setupOrbitControls(container);
+      window.addEventListener('resize', handleResize);
+    }
+
+    /**
+     * Smooth finger (touch) and mouse rotation + pinch/wheel zoom
+     */
+    function setupOrbitControls(el) {
+      // Mouse controls
+      el.addEventListener('mousedown', (e) => {
+        camOrbit.isDragging = true;
+        camOrbit.lastX = e.clientX;
+        camOrbit.lastY = e.clientY;
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (!camOrbit.isDragging) return;
+        const dx = e.clientX - camOrbit.lastX;
+        const dy = e.clientY - camOrbit.lastY;
+        camOrbit.lastX = e.clientX;
+        camOrbit.lastY = e.clientY;
+
+        camOrbit.targetTheta -= dx * 0.0085;
+        camOrbit.targetPhi = Math.max(0.18, Math.min(Math.PI - 0.18, camOrbit.targetPhi - dy * 0.0085));
+      });
+
+      window.addEventListener('mouseup', () => {
+        camOrbit.isDragging = false;
+      });
+
+      el.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        camOrbit.targetDistance = Math.max(5.0, Math.min(20.0, camOrbit.targetDistance + e.deltaY * 0.008));
+      }, { passive: false });
+
+      // Touch controls (1 finger = rotate, 2 fingers = pinch zoom)
+      el.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          camOrbit.isDragging = true;
+          camOrbit.lastX = e.touches[0].clientX;
+          camOrbit.lastY = e.touches[0].clientY;
+        } else if (e.touches.length === 2) {
+          camOrbit.isDragging = false;
+          const dx = e.touches[0].clientX - e.touches[1].clientX;
+          const dy = e.touches[0].clientY - e.touches[1].clientY;
+          camOrbit.pinchStartDist = Math.hypot(dx, dy);
+          camOrbit.pinchStartZoom = camOrbit.targetDistance;
+        }
+      }, { passive: false });
+
+      el.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        if (e.touches.length === 1 && camOrbit.isDragging) {
+          const dx = e.touches[0].clientX - camOrbit.lastX;
+          const dy = e.touches[0].clientY - camOrbit.lastY;
+          camOrbit.lastX = e.touches[0].clientX;
+          camOrbit.lastY = e.touches[0].clientY;
+
+          camOrbit.targetTheta -= dx * 0.011;
+          camOrbit.targetPhi = Math.max(0.18, Math.min(Math.PI - 0.18, camOrbit.targetPhi - dy * 0.011));
+        } else if (e.touches.length === 2 && camOrbit.pinchStartDist > 0) {
+          const dx = e.touches[0].clientX - e.touches[1].clientX;
+          const dy = e.touches[0].clientY - e.touches[1].clientY;
+          const dist = Math.hypot(dx, dy);
+          const scale = camOrbit.pinchStartDist / Math.max(10, dist);
+          camOrbit.targetDistance = Math.max(5.0, Math.min(20.0, camOrbit.pinchStartZoom * scale));
+        }
+      }, { passive: false });
+
+      el.addEventListener('touchend', () => {
+        camOrbit.isDragging = false;
+        camOrbit.pinchStartDist = 0;
+      });
+    }
+
+    function updateCameraPosition(immediate = false) {
+      if (immediate) {
+        camOrbit.theta = camOrbit.targetTheta;
+        camOrbit.phi = camOrbit.targetPhi;
+        camOrbit.distance = camOrbit.targetDistance;
+      } else {
+        camOrbit.theta += (camOrbit.targetTheta - camOrbit.theta) * 0.14;
+        camOrbit.phi += (camOrbit.targetPhi - camOrbit.phi) * 0.14;
+        camOrbit.distance += (camOrbit.targetDistance - camOrbit.distance) * 0.14;
+      }
+
+      const x = camOrbit.distance * Math.sin(camOrbit.phi) * Math.sin(camOrbit.theta);
+      const y = camOrbit.distance * Math.cos(camOrbit.phi);
+      const z = camOrbit.distance * Math.sin(camOrbit.phi) * Math.cos(camOrbit.theta);
+
+      camera.position.set(x, y, z);
+      camera.lookAt(0, 0, 0);
+    }
+
+    function handleResize() {
+      const container = document.getElementById('canvas-container');
+      if (!container || !renderer || !camera) return;
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+      if (w === 0 || h === 0) return;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h, false);
+    }
+
+    /**
+     * ============================================================================
+     * 4. 3D HELPER BUILDERS (ARROWS, CHARGES, GAUSSIAN SURFACES)
+     * ============================================================================
+     */
+    function clearGroup(group) {
+      while (group.children.length > 0) {
+        const obj = group.children[0];
+        group.remove(obj);
+      }
+    }
+
+    /**
+     * Builds a thick, high-visibility 3D arrow (cylinder shaft + cone head)
+     */
+    function createThickArrow(origin, dir, length, colorHex, thickness = 0.045) {
+      const group = new THREE.Group();
+      const safeLen = Math.max(0.28, length);
+      const headLen = Math.min(0.36, safeLen * 0.36);
+      const shaftLen = Math.max(0.05, safeLen - headLen);
+
+      const mat = new THREE.MeshStandardMaterial({
+        color: colorHex,
+        emissive: colorHex,
+        emissiveIntensity: 0.35,
+        roughness: 0.3
+      });
+
+      // Shaft
+      const shaftGeo = new THREE.CylinderGeometry(thickness, thickness, shaftLen, 12);
+      shaftGeo.translate(0, shaftLen / 2, 0);
+      const shaftMesh = new THREE.Mesh(shaftGeo, mat);
+      group.add(shaftMesh);
+
+      // Cone Head
+      const headGeo = new THREE.ConeGeometry(thickness * 2.5, headLen, 14);
+      headGeo.translate(0, shaftLen + headLen / 2, 0);
+      const headMesh = new THREE.Mesh(headGeo, mat);
+      group.add(headMesh);
+
+      // Orient along direction vector
+      const unitDir = dir.clone().normalize();
+      const up = new THREE.Vector3(0, 1, 0);
+      const quat = new THREE.Quaternion().setFromUnitVectors(up, unitDir);
+      group.quaternion.copy(quat);
+      group.position.copy(origin);
+
+      return group;
+    }
+
+    /**
+     * Builds a glowing positive charge sphere with a crisp 3D '+' symbol
+     */
+    function createChargeBead(radius = 0.22, isEnclosed = true) {
+      const group = new THREE.Group();
+      const color = isEnclosed ? 0xf43f5e : 0x64748b;
+      const emissive = isEnclosed ? 0xe11d48 : 0x1e293b;
+
+      const sphereGeo = new THREE.SphereGeometry(radius, 20, 20);
+      const sphereMat = new THREE.MeshStandardMaterial({
+        color,
+        emissive,
+        emissiveIntensity: isEnclosed ? 0.55 : 0.15,
+        roughness: 0.25
+      });
+      group.add(new THREE.Mesh(sphereGeo, sphereMat));
+
+      return group;
+    }
+
+    /**
+     * Builds the static charge distribution for the active section
+     */
+    function buildChargeDistribution() {
+      clearGroup(chargeGroup);
+      sphereChargeDots = [];
+
+      if (state.activeScene === 'point') {
+        // Central glowing point charge +Q
+        const core = createChargeBead(0.45, true);
+        // Outer glow halo
+        const haloGeo = new THREE.SphereGeometry(0.68, 24, 24);
+        const haloMat = new THREE.MeshBasicMaterial({
+          color: 0xf43f5e,
+          transparent: true,
+          opacity: 0.22
+        });
+        core.add(new THREE.Mesh(haloGeo, haloMat));
+        chargeGroup.add(core);
+
+      } else if (state.activeScene === 'sphere') {
+        const R = state.sphereRadiusR;
+        // Translucent solid insulating sphere of radius R
+        const mainGeo = new THREE.SphereGeometry(R, 36, 36);
+        const mainMat = new THREE.MeshStandardMaterial({
+          color: 0xf59e0b,
+          emissive: 0xd97706,
+          emissiveIntensity: 0.2,
+          transparent: true,
+          opacity: 0.24,
+          roughness: 0.3,
+          depthWrite: false
+        });
+        const sphereMesh = new THREE.Mesh(mainGeo, mainMat);
+        chargeGroup.add(sphereMesh);
+
+        // Wireframe equator ring to clearly mark boundary R
+        const ringGeo = new THREE.RingGeometry(R - 0.02, R + 0.02, 64);
+        const ringMat = new THREE.MeshBasicMaterial({
+          color: 0xfbbf24,
+          side: THREE.DoubleSide,
+          transparent: true,
+          opacity: 0.55
+        });
+        const ring1 = new THREE.Mesh(ringGeo, ringMat);
+        const ring2 = new THREE.Mesh(ringGeo, ringMat);
+        ring2.rotation.x = Math.PI / 2;
+        chargeGroup.add(ring1, ring2);
+
+        // Uniformly distributed charge beads inside radius R
+        const layers = [0, 0.75, 1.35, 1.85];
+        layers.forEach((rad, layerIdx) => {
+          if (rad === 0) {
+            const dot = createChargeBead(0.14, true);
+            dot.userData.radialDist = 0;
+            chargeGroup.add(dot);
+            sphereChargeDots.push(dot);
+            return;
+          }
+          const count = layerIdx * 10;
+          for (let i = 0; i < count; i++) {
+            // Fibonacci sphere distribution for uniform volumetric look
+            const phi = Math.acos(1 - (2 * (i + 0.5)) / count);
+            const theta = Math.PI * (1 + Math.sqrt(5)) * i + layerIdx;
+            const pos = new THREE.Vector3(
+              rad * Math.sin(phi) * Math.cos(theta),
+              rad * Math.cos(phi),
+              rad * Math.sin(phi) * Math.sin(theta)
+            );
+            const dot = createChargeBead(0.12, true);
+            dot.position.copy(pos);
+            dot.userData.radialDist = rad;
+            chargeGroup.add(dot);
+            sphereChargeDots.push(dot);
+          }
+        });
+
+      } else if (state.activeScene === 'plane') {
+        // Infinite charged horizontal sheet (represented as a large glowing plane at y = 0)
+        const size = 8.4;
+        const planeGeo = new THREE.BoxGeometry(size, 0.08, size);
+        const planeMat = new THREE.MeshStandardMaterial({
+          color: 0x10b981,
+          emissive: 0x059669,
+          emissiveIntensity: 0.25,
+          transparent: true,
+          opacity: 0.42,
+          roughness: 0.3
+        });
+        chargeGroup.add(new THREE.Mesh(planeGeo, planeMat));
+
+        // Grid lines on the charged sheet
+        const sheetGrid = new THREE.GridHelper(size, 8, 0x34d399, 0x059669);
+        sheetGrid.position.y = 0.05;
+        chargeGroup.add(sheetGrid);
+
+        // Positive charge beads evenly spaced across the plane
+        for (let x = -3.2; x <= 3.21; x += 1.6) {
+          for (let z = -3.2; z <= 3.21; z += 1.6) {
+            const bead = createChargeBead(0.13, true);
+            bead.position.set(x, 0, z);
+            chargeGroup.add(bead);
+          }
+        }
+
+      } else if (state.activeScene === 'rod') {
+        // Infinite charged rod along the Y-axis
+        const rodLength = 8.6;
+        const rodGeo = new THREE.CylinderGeometry(0.18, 0.18, rodLength, 24);
+        const rodMat = new THREE.MeshStandardMaterial({
+          color: 0xf43f5e,
+          emissive: 0xe11d48,
+          emissiveIntensity: 0.45,
+          roughness: 0.25
+        });
+        chargeGroup.add(new THREE.Mesh(rodGeo, rodMat));
+
+        // Evenly spaced + charge beads along the rod
+        for (let y = -3.6; y <= 3.61; y += 0.9) {
+          const bead = createChargeBead(0.23, true);
+          bead.position.set(0, y, 0);
+          chargeGroup.add(bead);
+        }
+      }
+    }
+
+    /**
+     * ============================================================================
+     * 5. DYNAMIC GAUSSIAN SURFACE, E-FIELD & NORMAL VECTOR UPDATER
+     * ============================================================================
+     */
+    function updateDynamicGeometry() {
+      clearGroup(gaussianGroup);
+      clearGroup(eFieldGroup);
+      clearGroup(normalGroup);
+
+      const r = state.radius;
+
+      // Material for translucent Gaussian surface
+      const gaussMat = new THREE.MeshStandardMaterial({
+        color: 0x38bdf8,
+        emissive: 0x0284c7,
+        emissiveIntensity: 0.25,
+        transparent: true,
+        opacity: 0.22,
+        side: THREE.DoubleSide,
+        depthWrite: false
+      });
+
+      const wireMat = new THREE.MeshBasicMaterial({
+        color: 0x7dd3fc,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.16
+      });
+
+      // ------------------------------------------------------------------------
+      // CASE 1: POINT CHARGE
+      // ------------------------------------------------------------------------
+      if (state.activeScene === 'point') {
+        // Spherical Gaussian surface of radius r
+        const gSphereGeo = new THREE.SphereGeometry(r, 32, 24);
+        gaussianGroup.add(new THREE.Mesh(gSphereGeo, gaussMat));
+        gaussianGroup.add(new THREE.Mesh(gSphereGeo, wireMat));
+
+        // Radial directions (14 symmetric directions)
+        const dirs = getFibonacciDirections(14);
+        // E ~ 1/r^2 (clamped nicely for visual clarity)
+        const eLen = Math.min(2.3, Math.max(0.45, 5.2 / (r * r)));
+
+        dirs.forEach((dir, idx) => {
+          const surfacePt = dir.clone().multiplyScalar(r);
+
+          // Electric field vector E (amber)
+          const eArrow = createThickArrow(surfacePt, dir, eLen, 0xfbbf24, 0.042);
+          eFieldGroup.add(eArrow);
+
+          // Area normal vector dA (emerald, slightly offset so both E and dA are clearly visible!)
+          if (idx % 2 === 0) {
+            const tangent = new THREE.Vector3(0, 1, 0).cross(dir);
+            if (tangent.lengthSq() < 0.01) tangent.set(1, 0, 0).cross(dir);
+            tangent.normalize().multiplyScalar(0.11);
+            const nArrow = createThickArrow(surfacePt.clone().add(tangent), dir, 0.85, 0x34d399, 0.034);
+            normalGroup.add(nArrow);
+          }
+        });
+
+      // ------------------------------------------------------------------------
+      // CASE 2: SOLID UNIFORMLY CHARGED SPHERE (r < R and r > R)
+      // ------------------------------------------------------------------------
+      } else if (state.activeScene === 'sphere') {
+        const R = state.sphereRadiusR;
+        const isInside = r < R;
+
+        // Highlight enclosed charges inside r vs unenclosed outside r
+        sphereChargeDots.forEach((dot) => {
+          const enclosed = dot.userData.radialDist <= r + 0.02;
+          const mesh = dot.children[0];
+          if (mesh && mesh.material) {
+            mesh.material.color.setHex(enclosed ? 0xf43f5e : 0x475569);
+            mesh.material.emissive.setHex(enclosed ? 0xe11d48 : 0x0f172a);
+            mesh.material.emissiveIntensity = enclosed ? 0.65 : 0.1;
+          }
+        });
+
+        // Gaussian sphere of radius r
+        const gSphereGeo = new THREE.SphereGeometry(r, 32, 24);
+        gaussianGroup.add(new THREE.Mesh(gSphereGeo, gaussMat));
+        gaussianGroup.add(new THREE.Mesh(gSphereGeo, wireMat));
+
+        // Electric field magnitude:
+        // Inside (r < R): E ~ r / R^3
+        // Outside (r >= R): E ~ 1 / r^2
+        let eLen;
+        if (isInside) {
+          eLen = Math.max(0.35, 1.55 * (r / R));
+        } else {
+          eLen = Math.max(0.42, 1.55 * ((R * R) / (r * r)));
+        }
+
+        const dirs = getFibonacciDirections(14);
+        dirs.forEach((dir, idx) => {
+          const surfacePt = dir.clone().multiplyScalar(r);
+          const eArrow = createThickArrow(surfacePt, dir, eLen, 0xfbbf24, 0.042);
+          eFieldGroup.add(eArrow);
+
+          if (idx % 2 === 0) {
+            const tangent = new THREE.Vector3(0, 1, 0).cross(dir);
+            if (tangent.lengthSq() < 0.01) tangent.set(1, 0, 0).cross(dir);
+            tangent.normalize().multiplyScalar(0.11);
+            const nArrow = createThickArrow(surfacePt.clone().add(tangent), dir, 0.85, 0x34d399, 0.034);
+            normalGroup.add(nArrow);
+          }
+        });
+
+      // ------------------------------------------------------------------------
+      // CASE 3: UNIFORMLY CHARGED INFINITE SURFACE (PILLBOX GAUSSIAN CYLINDER)
+      // ------------------------------------------------------------------------
+      } else if (state.activeScene === 'plane') {
+        const pillRadius = 1.45;
+        const halfHeight = r; // controlled by slider
+        const totalHeight = halfHeight * 2;
+
+        // Cylindrical Gaussian "pillbox" piercing through y = 0 sheet
+        const cylGeo = new THREE.CylinderGeometry(pillRadius, pillRadius, totalHeight, 32, 1, false);
+        gaussianGroup.add(new THREE.Mesh(cylGeo, gaussMat));
+
+        // Highlighted top and bottom circular end caps (Area A)
+        const capGeo = new THREE.CircleGeometry(pillRadius, 32);
+        const capMat = new THREE.MeshBasicMaterial({
+          color: 0x38bdf8,
+          transparent: true,
+          opacity: 0.35,
+          side: THREE.DoubleSide
+        });
+        const topCap = new THREE.Mesh(capGeo, capMat);
+        topCap.rotation.x = -Math.PI / 2;
+        topCap.position.y = halfHeight;
+
+        const botCap = new THREE.Mesh(capGeo, capMat);
+        botCap.rotation.x = Math.PI / 2;
+        botCap.position.y = -halfHeight;
+        gaussianGroup.add(topCap, botCap);
+
+        // Constant E field arrows pointing straight up (+Y) and down (-Y)
+        // Notice: E = sigma / (2 * eps0) does NOT shrink with distance z!
+        const constantELen = 1.25;
+        const offsets = [
+          [0, 0],
+          [0.75, 0],
+          [-0.75, 0],
+          [0, 0.75],
+          [0, -0.75]
+        ];
+
+        offsets.forEach(([ox, oz], idx) => {
+          // Top cap E arrow (+Y)
+          const topOrigin = new THREE.Vector3(ox, halfHeight, oz);
+          eFieldGroup.add(createThickArrow(topOrigin, new THREE.Vector3(0, 1, 0), constantELen, 0xfbbf24, 0.042));
+
+          // Bottom cap E arrow (-Y)
+          const botOrigin = new THREE.Vector3(ox, -halfHeight, oz);
+          eFieldGroup.add(createThickArrow(botOrigin, new THREE.Vector3(0, -1, 0), constantELen, 0xfbbf24, 0.042));
+
+          // Area Normal vectors dA on caps
+          if (idx === 0 || idx === 1) {
+            normalGroup.add(
+              createThickArrow(new THREE.Vector3(ox + 0.14, halfHeight, oz), new THREE.Vector3(0, 1, 0), 0.8, 0x34d399, 0.034)
+            );
+            normalGroup.add(
+              createThickArrow(new THREE.Vector3(ox + 0.14, -halfHeight, oz), new THREE.Vector3(0, -1, 0), 0.8, 0x34d399, 0.034)
+            );
+          }
+        });
+
+        // Side wall normal vectors dA (perpendicular to E -> zero flux!)
+        for (let a = 0; a < 4; a++) {
+          const angle = (a * Math.PI) / 2;
+          const nx = Math.cos(angle);
+          const nz = Math.sin(angle);
+          const sidePt = new THREE.Vector3(nx * pillRadius, halfHeight * 0.45, nz * pillRadius);
+          normalGroup.add(createThickArrow(sidePt, new THREE.Vector3(nx, 0, nz), 0.75, 0x34d399, 0.032));
+        }
+
+      // ------------------------------------------------------------------------
+      // CASE 4: UNIFORMLY CHARGED INFINITE ROD (COAXIAL GAUSSIAN CYLINDER)
+      // ------------------------------------------------------------------------
+      } else if (state.activeScene === 'rod') {
+        const cylHeight = 4.4; // Length L
+        const cylGeo = new THREE.CylinderGeometry(r, r, cylHeight, 32, 1, false);
+        gaussianGroup.add(new THREE.Mesh(cylGeo, gaussMat));
+
+        // Top and bottom rings to clearly frame length L
+        const ringGeo = new THREE.RingGeometry(r - 0.03, r + 0.03, 48);
+        const ringMat = new THREE.MeshBasicMaterial({ color: 0x7dd3fc, side: THREE.DoubleSide });
+        const topRing = new THREE.Mesh(ringGeo, ringMat);
+        topRing.rotation.x = Math.PI / 2;
+        topRing.position.y = cylHeight / 2;
+        const botRing = new THREE.Mesh(ringGeo, ringMat);
+        botRing.rotation.x = Math.PI / 2;
+        botRing.position.y = -cylHeight / 2;
+        gaussianGroup.add(topRing, botRing);
+
+        // E ~ 1/r
+        const eLen = Math.min(2.1, Math.max(0.45, 2.7 / r));
+        const yLevels = [-1.4, 0, 1.4];
+        const radialCount = 8;
+
+        yLevels.forEach((yPos, yIdx) => {
+          for (let i = 0; i < radialCount; i++) {
+            const angle = (i / radialCount) * Math.PI * 2;
+            const dir = new THREE.Vector3(Math.cos(angle), 0, Math.sin(angle));
+            const surfacePt = new THREE.Vector3(dir.x * r, yPos, dir.z * r);
+
+            // Radial E field vector
+            eFieldGroup.add(createThickArrow(surfacePt, dir, eLen, 0xfbbf24, 0.04));
+
+            // Curved wall normal dA
+            if (yIdx === 1 && i % 2 === 0) {
+              normalGroup.add(
+                createThickArrow(surfacePt.clone().add(new THREE.Vector3(0, 0.14, 0)), dir, 0.8, 0x34d399, 0.034)
+              );
+            }
+          }
+        });
+
+        // Top & bottom cap normals dA (pointing along +Y and -Y, perpendicular to E)
+        normalGroup.add(createThickArrow(new THREE.Vector3(r * 0.5, cylHeight / 2, 0), new THREE.Vector3(0, 1, 0), 0.8, 0x34d399, 0.034));
+        normalGroup.add(createThickArrow(new THREE.Vector3(r * 0.5, -cylHeight / 2, 0), new THREE.Vector3(0, -1, 0), 0.8, 0x34d399, 0.034));
+      }
+
+      // Sync group visibility with checkbox states
+      gaussianGroup.visible = state.showGaussian;
+      eFieldGroup.visible = state.showEField;
+      normalGroup.visible = state.showNormals;
+    }
+
+    /**
+     * Helper to generate N evenly spaced unit direction vectors on a sphere
+     */
+    function getFibonacciDirections(count) {
+      const dirs = [];
+      for (let i = 0; i < count; i++) {
+        const phi = Math.acos(1 - (2 * (i + 0.5)) / count);
+        const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+        dirs.push(
+          new THREE.Vector3(
+            Math.sin(phi) * Math.cos(theta),
+            Math.cos(phi),
+            Math.sin(phi) * Math.sin(theta)
+          ).normalize()
+        );
+      }
+      return dirs;
+    }
+
+    /**
+     * ============================================================================
+     * 6. UI RENDERING & EVENT HANDLERS (BILINGUAL + TABS + CHECKBOXES)
+     * ============================================================================
+     */
+    function updateUI() {
+      const t = TRANSLATIONS[state.lang];
+
+      // Header & hints
+      document.getElementById('ui-title').textContent = t.uiTitle;
+      document.getElementById('ui-subtitle').textContent = t.uiSubtitle;
+      document.getElementById('ui-reset-view').textContent = t.resetView;
+      document.getElementById('ui-gesture-hint').textContent = t.gestureHint;
+
+      // Legend
+      document.getElementById('legend-charge').textContent = t.legendCharge;
+      document.getElementById('legend-gauss').textContent = t.legendGauss;
+      document.getElementById('legend-efield').textContent = t.legendEfield;
+      document.getElementById('legend-normal').textContent = t.legendNormal;
+
+      // Checkboxes
+      document.getElementById('ui-layers-title').textContent = t.layersTitle;
+      document.getElementById('lbl-chk-gaussian').textContent = t.chkGaussian;
+      document.getElementById('lbl-chk-efield').textContent = t.chkEfield;
+      document.getElementById('lbl-chk-normals').textContent = t.chkNormals;
+      document.getElementById('lbl-chk-derivation').textContent = t.chkDerivation;
+
+      // Section Tabs
+      document.getElementById('tab-point').textContent = t.tabPoint;
+      document.getElementById('tab-sphere').textContent = t.tabSphere;
+      document.getElementById('tab-plane').textContent = t.tabPlane;
+      document.getElementById('tab-rod').textContent = t.tabRod;
+
+      // Active tab styling
+      document.querySelectorAll('.scene-tab').forEach((btn) => {
+        const isCurrent = btn.dataset.scene === state.activeScene;
+        if (isCurrent) {
+          btn.className =
+            'scene-tab px-3 py-2.5 rounded-xl text-left transition border flex items-center gap-2.5 bg-sky-500/15 border-sky-400/60 text-white shadow-sm';
+        } else {
+          btn.className =
+            'scene-tab px-3 py-2.5 rounded-xl text-left transition border flex items-center gap-2.5 bg-slate-800/60 border-slate-700/70 text-slate-300 hover:bg-slate-800';
+        }
+      });
+
+      // Language buttons styling
+      const btnEn = document.getElementById('lang-en');
+      const btnAz = document.getElementById('lang-az');
+      if (state.lang === 'en') {
+        btnEn.className = 'px-3 py-1 rounded-lg text-xs font-bold transition bg-sky-500 text-slate-950 shadow';
+        btnAz.className = 'px-3 py-1 rounded-lg text-xs font-bold transition text-slate-300 hover:text-white';
+      } else {
+        btnAz.className = 'px-3 py-1 rounded-lg text-xs font-bold transition bg-sky-500 text-slate-950 shadow';
+        btnEn.className = 'px-3 py-1 rounded-lg text-xs font-bold transition text-slate-300 hover:text-white';
+      }
+
+      // Sphere r < R vs r > R mode box
+      const sphereBox = document.getElementById('sphere-mode-box');
+      if (state.activeScene === 'sphere') {
+        sphereBox.classList.remove('hidden');
+        document.getElementById('ui-sphere-region-lbl').textContent = t.sphereRegionLbl;
+        document.getElementById('btn-sphere-inside').textContent = t.btnInside;
+        document.getElementById('btn-sphere-outside').textContent = t.btnOutside;
+
+        const isInside = state.radius < state.sphereRadiusR;
+        document.getElementById('ui-sphere-badge').textContent = isInside ? t.badgeInside : t.badgeOutside;
+
+        const btnIn = document.getElementById('btn-sphere-inside');
+        const btnOut = document.getElementById('btn-sphere-outside');
+        if (isInside) {
+          btnIn.className = 'py-2 px-3 rounded-xl text-xs font-bold border transition bg-amber-500/25 border-amber-400 text-amber-200';
+          btnOut.className = 'py-2 px-3 rounded-xl text-xs font-bold border transition bg-slate-900/70 border-slate-700 text-slate-300 hover:bg-slate-800';
+        } else {
+          btnOut.className = 'py-2 px-3 rounded-xl text-xs font-bold border transition bg-amber-500/25 border-amber-400 text-amber-200';
+          btnIn.className = 'py-2 px-3 rounded-xl text-xs font-bold border transition bg-slate-900/70 border-slate-700 text-slate-300 hover:bg-slate-800';
+        }
+      } else {
+        sphereBox.classList.add('hidden');
+      }
+
+      // Slider label & value readout
+      const sliderLabel = document.getElementById('ui-slider-label');
+      const sliderVal = document.getElementById('ui-slider-value');
+      document.getElementById('ui-slider-min').textContent = t.sliderCloser;
+      document.getElementById('ui-slider-max').textContent = t.sliderFarther;
+
+      if (state.activeScene === 'point') {
+        sliderLabel.textContent = t.sliderPointLabel;
+        sliderVal.textContent = `r = ${state.radius.toFixed(1)} m`;
+      } else if (state.activeScene === 'sphere') {
+        sliderLabel.textContent = t.sliderSphereLabel;
+        sliderVal.textContent = `r = ${state.radius.toFixed(1)} m`;
+      } else if (state.activeScene === 'plane') {
+        sliderLabel.textContent = t.sliderPlaneLabel;
+        sliderVal.textContent = `z = ${state.radius.toFixed(1)} m`;
+      } else if (state.activeScene === 'rod') {
+        sliderLabel.textContent = t.sliderRodLabel;
+        sliderVal.textContent = `r = ${state.radius.toFixed(1)} m`;
+      }
+
+      // Formula Derivation Panel visibility & content
+      const derivPanel = document.getElementById('derivation-panel');
+      if (state.showDerivation) {
+        derivPanel.classList.remove('hidden');
+      } else {
+        derivPanel.classList.add('hidden');
+      }
+
+      let sceneKey = state.activeScene;
+      if (state.activeScene === 'sphere') {
+        sceneKey = state.radius < state.sphereRadiusR ? 'sphere_inside' : 'sphere_outside';
+      }
+
+      const sceneContent = t.scenes[sceneKey];
+      document.getElementById('deriv-title').textContent = sceneContent.title;
+      document.getElementById('deriv-intuition').textContent = sceneContent.intuition;
+      document.getElementById('deriv-steps-heading').textContent = t.stepsHeading;
+
+      const stepsContainer = document.getElementById('deriv-steps-container');
+      stepsContainer.innerHTML = sceneContent.steps
+        .map(
+          (step) => `
+          <div class="p-2.5 rounded-xl bg-slate-950/70 border border-slate-800">
+            <div class="text-[11px] font-semibold text-slate-400 mb-1">${step.label}</div>
+            <div class="math-font text-sm sm:text-base text-amber-200 overflow-x-auto">${step.math}</div>
+          </div>
+        `
+        )
+        .join('');
+    }
+
+    function switchScene(newScene) {
+      state.activeScene = newScene;
+      const slider = document.getElementById('radius-slider');
+
+      // Set natural default radius for each geometry
+      if (newScene === 'point') {
+        slider.min = '0.9';
+        slider.max = '3.6';
+        state.radius = 2.2;
+      } else if (newScene === 'sphere') {
+        slider.min = '0.7';
+        slider.max = '3.6';
+        state.radius = 1.4; // Start inside (r < R) so students immediately see enclosed charge
+      } else if (newScene === 'plane') {
+        slider.min = '0.8';
+        slider.max = '3.0';
+        state.radius = 1.7;
+      } else if (newScene === 'rod') {
+        slider.min = '0.8';
+        slider.max = '3.4';
+        state.radius = 1.9;
+      }
+
+      slider.value = state.radius.toString();
+      buildChargeDistribution();
+      updateDynamicGeometry();
+      updateUI();
+    }
+
+    function bindEvents() {
+      // Language toggle buttons
+      document.getElementById('lang-en').addEventListener('click', () => {
+        state.lang = 'en';
+        updateUI();
+      });
+
+      document.getElementById('lang-az').addEventListener('click', () => {
+        state.lang = 'az';
+        updateUI();
+      });
+
+      // Reset camera button
+      document.getElementById('btn-reset-cam').addEventListener('click', () => {
+        camOrbit.targetTheta = 0.65;
+        camOrbit.targetPhi = 1.15;
+        camOrbit.targetDistance = 10.5;
+      });
+
+      // 4 Section Tabs
+      document.querySelectorAll('.scene-tab').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          switchScene(btn.dataset.scene);
+        });
+      });
+
+      // Sphere Inside (r < R) / Outside (r > R) buttons
+      document.getElementById('btn-sphere-inside').addEventListener('click', () => {
+        state.radius = 1.3;
+        document.getElementById('radius-slider').value = '1.3';
+        updateDynamicGeometry();
+        updateUI();
+      });
+
+      document.getElementById('btn-sphere-outside').addEventListener('click', () => {
+        state.radius = 3.0;
+        document.getElementById('radius-slider').value = '3.0';
+        updateDynamicGeometry();
+        updateUI();
+      });
+
+      // Radius / Distance Slider
+      document.getElementById('radius-slider').addEventListener('input', (e) => {
+        state.radius = parseFloat(e.target.value);
+        updateDynamicGeometry();
+        updateUI();
+      });
+
+      // 4 Visibility Checkboxes
+      document.getElementById('chk-gaussian').addEventListener('change', (e) => {
+        state.showGaussian = e.target.checked;
+        gaussianGroup.visible = state.showGaussian;
+      });
+
+      document.getElementById('chk-efield').addEventListener('change', (e) => {
+        state.showEField = e.target.checked;
+        eFieldGroup.visible = state.showEField;
+      });
+
+      document.getElementById('chk-normals').addEventListener('change', (e) => {
+        state.showNormals = e.target.checked;
+        normalGroup.visible = state.showNormals;
+      });
+
+      document.getElementById('chk-derivation').addEventListener('change', (e) => {
+        state.showDerivation = e.target.checked;
+        updateUI();
+      });
+    }
+
+    /**
+     * ============================================================================
+     * 7. ANIMATION LOOP (WINDOW ONLOAD)
+     * ============================================================================
+     */
+    function animate() {
+      requestAnimationFrame(animate);
+      updateCameraPosition(false);
+      renderer.render(scene, camera);
+    }
+
+    window.onload = function () {
+      initThree();
+      bindEvents();
+      switchScene('point');
+      handleResize();
+      animate();
+    };
+  </script>
+</body>
+</html>
